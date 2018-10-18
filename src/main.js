@@ -6,8 +6,10 @@
 
 import {blobToDataURL, dataURLToImage, dataURLToBlob} from './convertLib';
 
-function CropImage(id) {
-    let canvas = document.getElementById(id);
+function CropImage(canvas) {
+    if (!canvas) {
+        return console.log('error');
+    }
     let cropWidth = 100;
     let cw = canvas.getAttribute('data-width');
     cw = parseInt(cw);

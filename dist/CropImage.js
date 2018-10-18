@@ -38,8 +38,10 @@ var CropImage = (function () {
      @Description: Crop a picture into a rectangle by canvas
      */
 
-    function CropImage(id) {
-        var canvas = document.getElementById(id);
+    function CropImage(canvas) {
+        if (!canvas) {
+            return console.log('error');
+        }
         var cropWidth = 100;
         var cw = canvas.getAttribute('data-width');
         cw = parseInt(cw);

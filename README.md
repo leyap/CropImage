@@ -1,7 +1,7 @@
 # CropImage
 Crop a picture into a rectangle by canvas
 
-## who to use?
+## How to use?
 demo: index.html
 
 ````
