@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Image demo</title>
+    <script src="dist/CropImge.js"></script>
+</head>
+<body>
+<input type="file" onchange="onChange(event)">
+<canvas id="canvas" data-width="100"></canvas>
+
+<script>
+    var cropImage;
+    cropImage = new CropImage('canvas');
+    function onChange(e) {
+        cropImage.onInputImageFile(e.target.files[0], function (imgUrl) {
+//                e.target.value = null;
+//                console.log(imgUrl);
+        });
+    }
+</script>
+
+</body>
+</html>
